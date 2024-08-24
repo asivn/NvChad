@@ -116,24 +116,6 @@ local options = {
         sources = {
             { name = 'buffer' }
         },
-        formatting = {
-                fields = { "abbr", "kind", "menu" },
-                format = function(entry, vim_item)
-                    vim_item.kind = string.format("%s", cmp_ui.lspkind_text) -- Kind icons
-                    vim_item.menu = ({
-                        vimtex = vim_item.menu,
-                        luasnip = "[Snippet]",
-                        nvim_lsp = "[LSP]",
-                        buffer = "[Buffer]",
-                        spell = "[Spell]",
-                        -- orgmode = "[Org]",
-                        -- latex_symbols = "[Symbols]",
-                        cmdline = "[Command]",
-                        path = "[Path]",
-                    })[entry.source.name]
-                    return vim_item
-                end,
-            },
     }),
 
     -- `:` cmdline setup.
@@ -142,7 +124,25 @@ local options = {
         sources = {
             { name = 'path' },
             { name = 'cmdline' }
-        }
+        },
+        formatting = {
+            fields = { "abbr", "kind", "menu" },
+            format = function(entry, vim_item)
+                vim_item.kind = string.format("%s", cmp_ui.lspkind_text) -- Kind icons
+                vim_item.menu = ({
+                    vimtex = vim_item.menu,
+                    luasnip = "[Snippet]",
+                    nvim_lsp = "[LSP]",
+                    buffer = "[Buffer]",
+                    spell = "[Spell]",
+                    -- orgmode = "[Org]",
+                    -- latex_symbols = "[Symbols]",
+                    cmdline = "[Command]",
+                    path = "[Path]",
+                })[entry.source.name]
+                return vim_item
+            end,
+        },
     }),
 }
 
