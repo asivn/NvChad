@@ -1,7 +1,5 @@
 local map = vim.keymap.set
 
-map("n", "<leader>ch", "<cmd>NvCheatsheet<CR>", { desc = "Toggle nvcheatsheet" })
-
 map("n", "<leader>f", function()
   require("conform").format { lsp_fallback = true }
 end, { desc = "General Format file" })
