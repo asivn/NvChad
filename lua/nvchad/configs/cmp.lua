@@ -94,7 +94,6 @@ local options = {
     },
     sources = {
         { name = "nvim_lsp" },
-        { name = "buffer" },
         { name = "nvim_lua" },
         { name = "path" },
     },
@@ -121,7 +120,6 @@ local options = {
                 vim_item.menu = ({
                     vimtex = vim_item.menu,
                     nvim_lsp = "[LSP]",
-                    buffer = "[Buffer]",
                     spell = "[Spell]",
                     -- orgmode = "[Org]",
                     -- latex_symbols = "[Symbols]",
