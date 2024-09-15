@@ -107,6 +107,12 @@ local options = {
         },
     }),
 
+    cmp.setup.filetype("tex", {
+        sources = {
+            { name = 'vimtex' },
+        }
+    }),
+
     -- `:` cmdline setup.
     cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
