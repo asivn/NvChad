@@ -96,6 +96,7 @@ local options = {
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "path" },
+        { name = "vimtex" },
     },
 
     -- `/` cmdline setup.
