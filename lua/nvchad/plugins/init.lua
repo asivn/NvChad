@@ -2,14 +2,14 @@ return {
   "nvim-lua/plenary.nvim",
 
   {
-    "pauly00n/base46",
+    "asivn/base46",
     build = function()
       require("base46").load_all_highlights()
     end,
   },
 
   {
-    "pauly00n/ui",
+    "asivn/ui",
     lazy = false,
     build = function()
       dofile(vim.fn.stdpath "data" .. "/lazy/ui/lua/nvchad_feedback.lua")()
